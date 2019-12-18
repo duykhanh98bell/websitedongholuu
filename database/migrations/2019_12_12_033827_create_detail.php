@@ -23,6 +23,7 @@ class CreateDetail extends Migration
             $table->string('title',300);
             $table->string('images', 500);
             $table->string('content', 5000);
+            $table->string('summary', 5000);
             $table->string('slug', 500);
             $table->bigInteger('views');
             $table->tinyInteger('status');

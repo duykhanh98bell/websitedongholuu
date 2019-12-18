@@ -1,3 +1,4 @@
+
 <div class="banner-right col-lg-3 col-md-3 col-sm-4">
             
             
@@ -58,218 +59,50 @@
                 </ul>
                 <div id="tab1" class="tab-content" style="display: block;">
                     <ul>
+                        @foreach($Rtab1 as $tab1)
                         <li class="post-item-small">
                             <div class="row">
                                 <div class="col-md-4 col-xs-3">
                                     <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
+                                        <a href="#"><img src="{{('images/').$tab1->images}}" class="img-fluid" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-xs-9 no-padding-left">
                                     <div class="post-content">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
+                                        <a href="#">{{$tab1->title}} </a>
                                     </div>
                                     <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                        <i class="fas fa-calendar-alt"><span> {{$tab1->created_at}}</span></i>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content ">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content ">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
+                        @endforeach
                     </ul>
 
                 </div>
 
                 <div id="tab2" class="tab-content">
                     <ul>
+                        @foreach($Rtab2 as $tab2)
                         <li class="post-item-small">
                             <div class="row">
                                 <div class="col-md-4 col-xs-3">
                                     <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid" alt=""></a>
+                                        <a href="#"><img src="{{('images/'.$tab2->images)}}" class="img-fluid" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-xs-9 no-padding-left">
                                     <div class="post-content">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
+                                        <a href="#">{{$tab2->title}} </a>
                                     </div>
                                     <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                        <i class="fas fa-calendar-alt"><span> {{$tab2->created_at}}</span></i>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content ">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content ">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="post-item-small">
-                            <div class="row">
-                                <div class="col-md-4 col-xs-3">
-                                    <div class="img-thumb">
-                                        <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-xs-9 no-padding-left">
-                                    <div class="post-content">
-                                        <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                    </div>
-                                    <div class="post-info clearfix">
-                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
+                        @endforeach
                     </ul>
                 </div>
 
@@ -285,39 +118,11 @@
                 </div>
                 <div class="scroll">
                     <ul>
+                        @foreach($ViewCity as $ci)
                         <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
+                            <li>Họ Lưu {{$ci->name}}</li>
                         </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
-                        <a href="#">
-                            <li>Họ Lưu Hà Nội</li>
-                        </a>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -326,109 +131,25 @@
                     <h2><span>Tin nổi bật</span> </h2>
                 </div>
                 <ul>
+                    @foreach($Rtab2 as $tab2)
                     <li class="post-item-small">
                         <div class="row">
                             <div class="col-md-4 col-xs-3">
                                 <div class="img-thumb">
-                                    <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
+                                    <a href="#"><img src="{{('images/').$tab2->images}}" class="img-fluid" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-md-8 col-xs-9 no-padding-left">
                                 <div class="post-content">
-                                    <a href="#">Thanh niên Họ Lưu giao lưu </a>
+                                    <a href="#">{{$tab2->title}} </a>
                                 </div>
                                 <div class="post-info clearfix">
-                                    <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                    <i class="fas fa-calendar-alt"><span> {{$tab2->created_at}}</span></i>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="post-item-small">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-3">
-                                <div class="img-thumb">
-                                    <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-xs-9 no-padding-left">
-                                <div class="post-content">
-                                    <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                </div>
-                                <div class="post-info clearfix">
-                                    <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="post-item-small">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-3">
-                                <div class="img-thumb">
-                                    <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-xs-9 no-padding-left">
-                                <div class="post-content">
-                                    <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                </div>
-                                <div class="post-info clearfix">
-                                    <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="post-item-small">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-3">
-                                <div class="img-thumb">
-                                    <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-xs-9 no-padding-left">
-                                <div class="post-content ">
-                                    <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                </div>
-                                <div class="post-info clearfix">
-                                    <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="post-item-small">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-3">
-                                <div class="img-thumb">
-                                    <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-xs-9 no-padding-left">
-                                <div class="post-content ">
-                                    <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                </div>
-                                <div class="post-info clearfix">
-                                    <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="post-item-small">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-3">
-                                <div class="img-thumb">
-                                    <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-xs-9 no-padding-left">
-                                <div class="post-content">
-                                    <a href="#">Thanh niên Họ Lưu giao lưu </a>
-                                </div>
-                                <div class="post-info clearfix">
-                                    <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
+                    @endforeach
                 </ul>
             </div>
 

@@ -29,43 +29,73 @@
                 <ul class="navbar-nav nav justify-content-center">
                   <li class="nav-item"> <a class="nav-link" href="#">GIỚI THIỆU</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">BAN CHẤP HÀNH</a>
-                        <a class="dropdown-item" href="#">QUY CHẾ</a> </div>
+                      <div class="dropdown-menu">
+                       @foreach($ViewIntro as $in)
+                       <a class="dropdown-item" href="{{$in->slug}}">{{$in->name}}</a>
+                       @endforeach
                     </div>
                   </li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('lichsudongho')}}">LỊCH SỬ DÒNG HỌ</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">LỊCH SỬ HỌ LƯU</a> <a class="dropdown-item" href="#">NGHIÊN CỨU LỊCH SỬ DÒNG HỌ </a> </div>
+                      <div class="dropdown-menu">
+                        @foreach($ViewHs as $hs)
+                       <a class="dropdown-item" href="{{$hs->slug}}">{{$hs->name}}</a>
+                       @endforeach
+                     </div>
                     </div>
                   </li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('thongtinsukien')}}">THÔNG TIN SỰ KIỆN</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">CƠ HỘI DOANH DOANH</a> <a class="dropdown-item" href="#">CLB DOANH NGHIỆP - DOANH NHÂN</a> <a class="dropdown-item" href="#">CÔNG TY TNHH XÃ HỘI ÁNH DƯƠNG</a> <a class="dropdown-item" href="#">CLB LÃO THÀNH</a> </div>
+                      <div class="dropdown-menu">
+                       @foreach($ViewIf as $if)
+                       <a class="dropdown-item" href="{{$if->slug}}">{{$if->name}}</a>
+                       @endforeach
+                     </div>
                     </div>
                   </li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('khuyenhockhuyentai')}}">KHUYẾN HỌC KHUYẾN TÀI</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">KHUYẾN HỌC KHUYẾN TÀI</a> <a class="dropdown-item" href="#">HỖ TRỢ TÀI NĂNG TRẺ</a> </div>
+                      <div class="dropdown-menu">
+                       @foreach($ViewKk as $Kk)
+                       <a class="dropdown-item" href="{{$Kk->slug}}">{{$Kk->name}}</a>
+                       @endforeach
+                     </div>
                     </div>
                   </li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('nguoitotviectot')}}">NGƯỜI TỐT VIỆC TỐT</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">CLB THANH NIÊN</a> <a class="dropdown-item" href="#">THANH NIÊN TIÊU BIỂU</a> <a class="dropdown-item" href="#">LẬP THÂN LẬP NGHIỆP</a> </div>
+                      <div class="dropdown-menu">
+                       @foreach($ViewGood as $Good)
+                       <a class="dropdown-item" href="{{$Good->slug}}">{{$Good->name}}</a>
+                       @endforeach
+                     </div>
                     </div>
                   </li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('thuvien')}}">THƯ VIỆN</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#"> VĂN HÓA NT</a> <a class="dropdown-item" href="#">TRẠI HÈ THANH NIÊN</a> <a class="dropdown-item" href="#">VĂN BẢN</a> <a class="dropdown-item" href="#">HÌNH ẢNH </a> </div>
+                      <div class="dropdown-menu">
+                       @foreach($ViewLb as $Lb)
+                       <a class="dropdown-item" href="{{$Lb->slug}}">{{$Lb->name}}</a>
+                       @endforeach
+                     </div>
                     </div>
                   </li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('congdongdonggop')}}">CỘNG ĐỒNG HỌ LƯU ĐÓNG GÓP</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">BÀI VIẾT THÀNH VIÊN DÒNG TỘC</a> <a class="dropdown-item" href="#">THI ĐUA KHEN THƯỞNG</a> </div>
+                      <div class="dropdown-menu">
+                        @foreach($ViewCom as $Com)
+                       <a class="dropdown-item" href="{{$Com->slug}}">{{$Com->name}}</a>
+                       @endforeach
+                     </div>
                     </div>
                   </li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('gopy')}}">GÓP Ý</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">VĂN HÓA VĂN NGHỆ</a> <a class="dropdown-item" href="#">VĂN BẢN</a> <a class="dropdown-item" href="#">HÌNH ẢNH-VIDEO</a> <a class="dropdown-item" href="#">KHÁC</a> </div>
+                      <div class="dropdown-menu">
+                       @foreach($ViewFb as $Fb)
+                       <a class="dropdown-item" href="{{$Fb->slug}}">{{$Fb->name}}</a>
+                       @endforeach
+                     </div>
                     </div>
                   </li>
                 </ul>
